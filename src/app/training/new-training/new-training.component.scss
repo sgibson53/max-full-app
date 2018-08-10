@@ -1,0 +1,19 @@
+.new-training {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+mat-card-content {
+  margin: auto;
+
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+mat-card-actions {
+  display: block;
+  width: 80px;
+  margin: auto;
+}

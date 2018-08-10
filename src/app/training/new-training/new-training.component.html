@@ -1,0 +1,18 @@
+<section class="new-training">
+  <mat-card>
+    <mat-card-title>Time to start a workout!</mat-card-title>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-select placeholder="Select type of training">
+          <mat-option *ngFor="let workout of workouts" [value]="workout.value">
+            {{workout.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button type="submit" mat-button (click)="onStartTraining()">Start</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

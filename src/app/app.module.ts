@@ -11,7 +11,11 @@ import { CurrentTrainingComponent } from "./training/current-training/current-tr
 import { PastTrainingComponent } from "./training/past-training/past-training.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { AppRoutingModule } from "./app-routing.module";
-import { FormsModule } from "../../node_modules/@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HeaderComponent } from "./navigation/header/header.component";
+import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.component";
+import { NewTrainingComponent } from "./training/new-training/new-training.component";
+import { StopTrainingComponent } from "./training/current-training/stop-training.component";
 
 @NgModule({
   declarations: [
@@ -21,16 +25,22 @@ import { FormsModule } from "../../node_modules/@angular/forms";
     TrainingComponent,
     CurrentTrainingComponent,
     PastTrainingComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    HeaderComponent,
+    SidenavListComponent,
+    NewTrainingComponent,
+    StopTrainingComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [StopTrainingComponent]
 })
 export class AppModule {}
